@@ -7,6 +7,7 @@ require (
 	github.com/go-kratos/kratos/cmd/kratos/v2 v2.0.0-20210513065735-6791cd665b22 // indirect
 	github.com/go-kratos/kratos/cmd/protoc-gen-go-http/v2 v2.0.0-20210513065735-6791cd665b22 // indirect
 	github.com/go-kratos/kratos/v2 v2.0.0-beta4
+	github.com/golang/protobuf v1.5.2
 	github.com/google/wire v0.5.0
 	github.com/gorilla/mux v1.8.0
 	github.com/imdario/mergo v0.3.11 // indirect
