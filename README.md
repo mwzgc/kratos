@@ -28,3 +28,9 @@ go get github.com/google/wire/cmd/wire
 cd cmd/server
 wire
 ```
+
+# ent
+ent init User
+go generate ./ent
+```
+

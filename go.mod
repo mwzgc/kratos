@@ -3,6 +3,10 @@ module kratos
 go 1.15
 
 require (
+	entgo.io/ent v0.6.0
+	github.com/go-redis/redis/extra/redisotel v0.3.0
+	github.com/go-redis/redis/v8 v8.7.1
+	github.com/go-sql-driver/mysql v1.5.1-0.20200311113236-681ffa848bae
 	github.com/fatih/color v1.10.0 // indirect
 	github.com/go-kratos/kratos/cmd/kratos/v2 v2.0.0-20210513065735-6791cd665b22 // indirect
 	github.com/go-kratos/kratos/cmd/protoc-gen-go-http/v2 v2.0.0-20210513065735-6791cd665b22 // indirect
