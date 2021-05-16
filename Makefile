@@ -46,6 +46,15 @@ build:
 test:
 	go test -v ./... -cover
 
+.PHONY: run
+# run
+run:
+	mkdir -p bin/ && go build -ldflags "-X main.Version=$(VERSION)" -o ./bin/ ./... && ./bin/kratos -conf ./configs
+
+.PHONY: ent
+ent:
+	cd internal/data/ && go generate ./ent
+
 .PHONY: all
 # generate all
 all:

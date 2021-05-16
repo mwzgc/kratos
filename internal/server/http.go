@@ -1,10 +1,11 @@
 package server
 
 import (
-	v1 "kratos/api/helloworld/v1"
 	blogV1 "kratos/api/blog/v1"
+	v1 "kratos/api/helloworld/v1"
 	"kratos/internal/conf"
 	"kratos/internal/service"
+
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/go-kratos/kratos/v2/middleware"
 	"github.com/go-kratos/kratos/v2/middleware/logging"
@@ -33,7 +34,7 @@ func NewHTTPServer(c *conf.Server, greeter *service.GreeterService, blog *servic
 			logging.Server(logger),
 		),
 	)
-	srv.HandlePrefix("/", v1.NewGreeterHandler(greeter, m))
-	srv.HandlePrefix("/", blogV1.NewBlogServiceHandler(blog, m))
+	srv.HandlePrefix("/helloworld", v1.NewGreeterHandler(greeter, m))
+	srv.HandlePrefix("/v1", blogV1.NewBlogServiceHandler(blog, m))
 	return srv
 }
